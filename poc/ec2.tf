@@ -5,7 +5,7 @@ data "aws_ssm_parameter" "amzn2023" {
 resource "aws_launch_template" "app" {
   name_prefix   = "app-"
   image_id      = nonsensitive(data.aws_ssm_parameter.amzn2023.value)
-  instance_type = "t3.small"
+  instance_type = "t3.medium"
   # user_data = filebase64("${path.module}/example.sh")
 }
 
