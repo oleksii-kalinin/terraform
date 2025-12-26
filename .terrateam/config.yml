@@ -1,0 +1,14 @@
+apply_requirements:
+  checks:
+    - tag_query: ""
+      approved:
+        enabled: true
+        any_of_count: 1
+      merge_conflicts:
+        enabled: true
+      status_checks:
+        enabled: true
+cost_estimation:
+  enabled: true
+automerge:
+  enabled: true
